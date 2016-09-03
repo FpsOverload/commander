@@ -9,5 +9,10 @@
             "email": "me@oliverlumby.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FpsOverload\\Commander\\": "src"
+        }
+    }
 }

@@ -2,6 +2,8 @@
 
 namespace FpsOverload\Commander;
 
+use FpsOverload\Commander\Exceptions\GameException;
+
 class Commander {
 
     protected $classMap = [
@@ -10,9 +12,17 @@ class Commander {
         'cod4' => Clients\CoD4::class,
     ];
 
+    protected $client;
+
     function __construct($game, $host, $port, $password = null)
     {
+        $client = $this->getClient($game);
 
+        $this->client = new $client($host, $port, $password);
+
+        if ($password == null) {
+            $this->client->guest = true;
+        }
     }
 
     protected function getClient($game)
