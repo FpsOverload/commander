@@ -1,0 +1,13 @@
+{
+    "name": "fpsol/commander",
+    "description": "A PHP Library for connecting to and administrating game servers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Lumby",
+            "email": "me@oliverlumby.com"
+        }
+    ],
+    "require": {}
+}
